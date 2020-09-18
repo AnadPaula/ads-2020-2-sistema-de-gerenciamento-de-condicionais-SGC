@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Cliente;
+use App\Models\Produto;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,11 @@ Route::get('/clientes', function () {
     $clientes = Cliente::All();
     return $clientes;
 });
+
+Route::get('/produtos', function () {
+    $produtos = Produto::All();
+    return $produtos;
+});
+
+
+
