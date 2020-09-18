@@ -19,8 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/clientes', function () {
-    $clientes = Cliente::All();
-    return $clientes;
+    return 'cliente';
 });
 
 Route::get('/produtos', function () {
