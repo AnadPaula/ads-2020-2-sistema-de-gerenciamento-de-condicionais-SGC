@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Cliente;
 use App\Models\Produto;
+use App\Models\Funcionario;
+use App\Models\Pedido;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,14 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/clientes', function () {
-    return 'cliente';
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
 
-Route::get('/produtos', function () {
-    $produtos = Produto::All();
-    return $produtos;
-});
+Route::resourse('/clientes', 'ClienteController');  
+    
 
 
 
