@@ -15,6 +15,10 @@
             <input type="text" class="form-control" id="" name="cpf" value="{{ $cliente->cpf }}">
         </div>
         <div class="form-group">
+            <label for="">ID</label>
+            <input type="text" class="form-control" id="" name="cpf" value="{{ $cliente->id_cliente }}">
+        </div>
+        <div class="form-group">
             <label for="">RG</label>
             <input type="text" class="form-control" id="" name="rg" value="{{ $cliente->rg }}">
         </div>

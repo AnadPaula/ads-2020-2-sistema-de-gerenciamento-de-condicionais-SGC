@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cliente;
-
-class ClienteController extends Controller
+use App\Models\Produto;
+class ProdutoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +13,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::All();
-
-        return view('cliente.index', array('clientes' => $clientes));
+        return view('produto.index');
     }
-    
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +23,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('cliente.create');
+        //
     }
 
     /**
@@ -38,9 +34,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        $cliente = Cliente::create($request->all());
-
-        return redirect('clientes')->with('status', 'Novo cliente cadastrado com sucesso!');
+        //
     }
 
     /**
@@ -62,9 +56,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        $cliente = Cliente::find($id);
-
-         return view('cliente.edit', array('cliente' => $cliente));
+        //
     }
 
     /**
@@ -76,10 +68,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $cliente = Cliente::find($id);
-        $cliente->update($request->all());
-
-        return redirect('clientes')->with('statusUpdate', 'Cliente atualizado com sucesso!');
+        //
     }
 
     /**
@@ -90,14 +79,6 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        
-        $cliente = Cliente::find($id);
-        $nome = $cliente->nome;
-
-        $cliente->delete();
-
-        $mensagem = "O cliente <b>{$nome}</b> foi excluído com sucesso!";
-
-        return redirect('clientes')->with('statusUpdate', $mensagem);
+        //
     }
 }

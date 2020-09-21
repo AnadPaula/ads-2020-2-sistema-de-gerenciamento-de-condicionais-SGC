@@ -29,6 +29,8 @@
                 <tr>
                     <th>#</th>
                     <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Id_cliente</th>
                     <th>RG</th>
                     <th>Endereço</th>
                     <th>Data Nascimento</th>
@@ -42,11 +44,13 @@
 
                 @foreach($clientes as $cliente)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $cliente->nome }}</td>
+                        <td>{{ $loop->iteration }}</td>                        
+                        <td>{{ $cliente->nome_cliente }}</td>
+                        <td>{{ $cliente->cpf}}</td>
+                        <td>{{ $cliente->id_cliente }}</td>
                         <td>{{ $cliente->rg }}</td>
                         <td>{{ $cliente->endereço }}</td>
-                        <td>{{ $cliente->data nascimento }}</td>
+                        <td>{{ $cliente->data_nascimento }}</td>
                         <td>{{ $cliente->email }}</td>
                         <td>{{ $cliente->telefone }}</td>
                         <td>

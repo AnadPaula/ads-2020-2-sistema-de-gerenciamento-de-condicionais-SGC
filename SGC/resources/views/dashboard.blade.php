@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('content-title', 'Dash')
+@section('content-title', 'Dashbord')
 
 @section('content')
-    <h2>Okay</h2>
+    <h2>Ok</h2>
 @endsection

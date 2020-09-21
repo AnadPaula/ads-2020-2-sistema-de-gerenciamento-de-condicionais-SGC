@@ -14,6 +14,10 @@
             <input type="text" class="form-control" id="" name="cpf">
         </div>
         <div class="form-group">
+            <label for="">ID</label>
+            <input type="text" class="form-control" id="" name="id_cliente">
+        </div>
+        <div class="form-group">
             <label for="">RG</label>
             <input type="text" class="form-control" id="" name="rg">
         </div>
