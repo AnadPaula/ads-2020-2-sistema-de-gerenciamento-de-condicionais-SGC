@@ -27,7 +27,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>#</th>
+                   
                     <th>Nome</th>
                     <th>CPF</th>
                     <th>Id_cliente</th>
@@ -54,9 +54,9 @@
                         <td>{{ $cliente->email }}</td>
                         <td>{{ $cliente->telefone }}</td>
                         <td>
-                            <a href="{{ route('clientes.edit', $cliente->id) }}">Editar</a>
+                            <a href="{{ route('clientes.edit', $cliente->id_cliente) }}">Editar</a>
 
-                            <a href="{{ route('clientes.destroy-confirm', $cliente->id) }}">Excluir</a>
+                            <a href="{{ route('clientes.destroy-confirm', $cliente->id_cliente) }}">Excluir</a>
                         </td>
                     </tr>
                 @endforeach

@@ -25,7 +25,7 @@ Route::get('/dashboard', function () {
 });
 
 Route::resource('/clientes', 'ClienteController');
-Route::get('/clientes/destroy/{id}', 'ClienteController@destroyConfirm')->name('clientes.destroy-confirm');
+Route::get('/clientes/destroy/{id_cliente}', 'ClienteController@destroyConfirm')->name('clientes.destroy-confirm');
    
 Route::resource('/produtos', 'ProdutoController');
 

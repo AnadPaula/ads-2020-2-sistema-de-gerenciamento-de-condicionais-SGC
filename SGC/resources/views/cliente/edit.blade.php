@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <label for="">ID</label>
-            <input type="text" class="form-control" id="" name="cpf" value="{{ $cliente->id_cliente }}">
+            <input type="text" class="form-control" id="" name="id_cliente" value="{{ $cliente->id_cliente }}">
         </div>
         <div class="form-group">
             <label for="">RG</label>

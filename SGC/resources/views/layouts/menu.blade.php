@@ -14,15 +14,22 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('servicos*') ? 'active' : '' }}" href="{{ route('servicos.index') }}">
+                <a class="nav-link {{ request()->is('funcionarios*') ? 'active' : '' }}" href="{{ route('funcionarios.index') }}">
                     <span data-feather="shopping-cart"></span>
-                    Serviços
+                   Funcionários
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('ordem-servicos*') ? 'active' : '' }}" href="{{ route('ordem-servicos.index') }}">
+                <a class="nav-link {{ request()->is('produtos*') ? 'active' : '' }}" href="{{ route('produtos.index') }}">
                     <span data-feather="users"></span>
-                    Ordem de Serviços
+                    Produtos
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{ request()->is('pedidos*') ? 'active' : '' }}" href="{{ route('pedidos.index') }}">
+                    <span data-feather="users"></span>
+                   Pedidos
                 </a>
             </li>
 

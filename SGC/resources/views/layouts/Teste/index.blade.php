@@ -14,10 +14,15 @@
 
     <table class="table mt-3">
         <thead>
-            <tr>
-                <th>#</th>
+            <tr>              
                 <th>Nome</th>
+                <th>CPF</th>
+                <th>ID_Cliente</th>
+                <th>RG</th>
+                <th>Endereço</th>
                 <th>E-mail</th>
+                <th>Data Nascimento</th>
+                <th>Telefone</th>
             </tr>
         </thead>
         <tbody>
