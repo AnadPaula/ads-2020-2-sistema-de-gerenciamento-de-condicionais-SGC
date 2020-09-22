@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('content-title', 'Clientes cadastrados')
+@section('content-title', 'Clientes')
 
 @section('content')
     <a href="{{ route('clientes.create') }}" class="btn btn-primary">Novo cliente</a>
@@ -27,10 +27,9 @@
         <table class="table">
             <thead>
                 <tr>
-                   
+                    <th>Id_Cliente</th>
                     <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Id_cliente</th>
+                    <th>CPF</th>                    
                     <th>RG</th>
                     <th>Endereço</th>
                     <th>Data Nascimento</th>
@@ -44,11 +43,10 @@
 
                 @foreach($clientes as $cliente)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>                        
+                        <td>{{ $loop->iteration }}</td>                                            
                         <td>{{ $cliente->nome_cliente }}</td>
-                        <td>{{ $cliente->cpf}}</td>
-                        <td>{{ $cliente->id_cliente }}</td>
-                        <td>{{ $cliente->rg }}</td>
+                        <td>{{ $cliente->cpf}}</td>                       
+                        <td>{{ $cliente->RG }}</td>
                         <td>{{ $cliente->endereço }}</td>
                         <td>{{ $cliente->data_nascimento }}</td>
                         <td>{{ $cliente->email }}</td>

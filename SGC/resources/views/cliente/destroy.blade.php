@@ -13,11 +13,11 @@
         @method('DELETE')
 
         <p>
-            <b>Nome:</b> {{ $cliente->nome-cliente }} <br>
+            <b>Nome:</b> {{ $cliente->nome_cliente }} <br>
             <b>CPF:</b> {{ $cliente->cpf }} <br>
             <b>ID_CLIENTE:</b> {{ $cliente->id_cliente }} <br>
-            <b>RG:</b> {{ $cliente->rg }} <br>
-            <b>ENDEREÇO:</b> {{ $cliente->endereco }} <br>
+            <b>RG:</b> {{ $cliente->RG }} <br>
+            <b>ENDEREÇO:</b> {{ $cliente->endereço }} <br>
             <b>E-mail:</b> {{ $cliente->email }}
             <b>DATA NASCIMENTO:</b> {{ $cliente->data_nascimento }} <br>
             <b>TELEFONE:</b> {{ $cliente->telefone }} <br>

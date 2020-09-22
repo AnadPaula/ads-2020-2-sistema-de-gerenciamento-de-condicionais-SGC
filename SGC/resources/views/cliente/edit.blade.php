@@ -3,9 +3,13 @@
 @section('content-title', 'Atualização de cliente')
 
 @section('content')
-    <form action="/clientes/{{ $cliente->id }}" method="post">
+    <form action="/clientes/{{ $cliente->id_cliente }}" method="post">
         @csrf
-        @method('PUT')
+        @method('PUT') 
+        <div class="form-group">
+            <label for="">ID</label>
+            <input type="text" class="form-control" id="" name="nome_cliente" value="{{ $cliente->id_cliente }}">
+        </div>
         <div class="form-group">
             <label for="">Nome</label>
             <input type="text" class="form-control" id="" name="nome_cliente" value="{{ $cliente->nome_cliente }}">
@@ -14,13 +18,10 @@
             <label for="">CPF</label>
             <input type="text" class="form-control" id="" name="cpf" value="{{ $cliente->cpf }}">
         </div>
-        <div class="form-group">
-            <label for="">ID</label>
-            <input type="text" class="form-control" id="" name="id_cliente" value="{{ $cliente->id_cliente }}">
-        </div>
+        
         <div class="form-group">
             <label for="">RG</label>
-            <input type="text" class="form-control" id="" name="rg" value="{{ $cliente->rg }}">
+            <input type="text" class="form-control" id="" name="rg" value="{{ $cliente->RG }}">
         </div>
         <div class="form-group">
             <label for="">ENDEREÇO</label>

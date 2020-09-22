@@ -6,6 +6,10 @@
     <form action="{{ route('clientes.store') }}" method="post">
         @csrf
         <div class="form-group">
+            <label for="">ID</label>
+            <input type="text" class="form-control" id="" name="id_cliente">
+        </div>
+        <div class="form-group">
             <label for="">Nome</label>
             <input type="text" class="form-control" id="" name="nome_cliente">
         </div>
@@ -13,13 +17,10 @@
             <label for="">CPF</label>
             <input type="text" class="form-control" id="" name="cpf">
         </div>
-        <div class="form-group">
-            <label for="">ID</label>
-            <input type="text" class="form-control" id="" name="id_cliente">
-        </div>
+       
         <div class="form-group">
             <label for="">RG</label>
-            <input type="text" class="form-control" id="" name="rg">
+            <input type="text" class="form-control" id="" name="RG">
         </div>
         <div class="form-group">
             <label for="">ENDEREÇO</label>

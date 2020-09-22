@@ -2,7 +2,7 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
+                <a class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}" href="{{('dashboard') }}">
                     <span data-feather="home"></span>
                     Dashboard<span class="sr-only">(current)</span>
                 </a>
@@ -14,20 +14,20 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('funcionarios*') ? 'active' : '' }}" href="{{ route('funcionarios.index') }}">
+                <a class="nav-link {{ request()->is('funcionarios*') ? 'active' : '' }}" href="">
                     <span data-feather="shopping-cart"></span>
                    Funcionários
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('produtos*') ? 'active' : '' }}" href="{{ route('produtos.index') }}">
+                <a class="nav-link {{ request()->is('produtos*') ? 'active' : '' }}" href="">
                     <span data-feather="users"></span>
                     Produtos
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('pedidos*') ? 'active' : '' }}" href="{{ route('pedidos.index') }}">
+                <a class="nav-link {{ request()->is('pedidos*') ? 'active' : '' }}" href="">
                     <span data-feather="users"></span>
                    Pedidos
                 </a>

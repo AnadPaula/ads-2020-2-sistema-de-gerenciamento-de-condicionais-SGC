@@ -60,11 +60,12 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_cliente)
     {
-        $cliente = Cliente::find($id);
+        $cliente = Cliente::find($id_cliente);
 
          return view('cliente.edit', array('cliente' => $cliente));
+         
     }
 
     /**
@@ -74,9 +75,9 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_cliente)
     {
-        $cliente = Cliente::find($id);
+        $cliente = Cliente::find($id_cliente);
         $cliente->update($request->all());
 
         return redirect('clientes')->with('statusUpdate', 'Cliente atualizado com sucesso!');
@@ -88,15 +89,15 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_cliente)
     {
         
-        $cliente = Cliente::find($id);
+        $cliente = Cliente::find($id_cliente);
         $nome = $cliente->nome;
 
         $cliente->delete();
 
-        $mensagem = "O cliente <b>{$nome}</b> foi excluído com sucesso!";
+        $mensagem = "O cliente <b>{$id_cliente}</b> foi excluído com sucesso!";
 
         return redirect('clientes')->with('statusUpdate', $mensagem);
     }

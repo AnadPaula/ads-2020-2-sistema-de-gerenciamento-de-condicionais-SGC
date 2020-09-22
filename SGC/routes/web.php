@@ -1,10 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Cliente;
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProdutoController;
+/*use App\Models\Cliente;
 use App\Models\Produto;
 use App\Models\Funcionario;
 use App\Models\Pedido;
+*/
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,10 +27,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::resource('/clientes', 'ClienteController');
+Route::resource('/clientes', ClienteController::class);
 Route::get('/clientes/destroy/{id_cliente}', 'ClienteController@destroyConfirm')->name('clientes.destroy-confirm');
    
-Route::resource('/produtos', 'ProdutoController');
+Route::resource('/produtos', ProdutoController::class);
 
 
 
