@@ -14,17 +14,18 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link {{ request()->is('produtos*') ? 'active' : '' }}" href="{{ route('produtos.index') }}">
+                    <span data-feather="users"></span>
+                    Produtos
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link {{ request()->is('funcionarios*') ? 'active' : '' }}" href="">
                     <span data-feather="shopping-cart"></span>
                    Funcionários
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('produtos*') ? 'active' : '' }}" href="">
-                    <span data-feather="users"></span>
-                    Produtos
-                </a>
-            </li>
+           
 
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('pedidos*') ? 'active' : '' }}" href="">

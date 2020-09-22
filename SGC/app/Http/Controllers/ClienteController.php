@@ -49,9 +49,12 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_cliente)
     {
-        //
+        $cliente = Cliente::with('pedidos')->find($id_cliente);
+        //$cliente = Cliente::find($id)->pedidos;
+
+        return $cliente;
     }
 
     /**
@@ -64,8 +67,8 @@ class ClienteController extends Controller
     {
         $cliente = Cliente::find($id_cliente);
 
-         return view('cliente.edit', array('cliente' => $cliente));
-         
+        return view('cliente.edit', array('cliente' => $cliente));
+
     }
 
     /**
@@ -93,12 +96,21 @@ class ClienteController extends Controller
     {
         
         $cliente = Cliente::find($id_cliente);
-        $nome = $cliente->nome;
+        $nome_cliente = $cliente->nome_cliente;
 
         $cliente->delete();
 
-        $mensagem = "O cliente <b>{$id_cliente}</b> foi excluído com sucesso!";
+        $mensagem = "O cliente <b>{$nome_cliente}</b> foi excluído com sucesso!";
 
         return redirect('clientes')->with('statusUpdate', $mensagem);
     }
+
+
+    public function destroyConfirm($id_cliente)
+    {
+        $cliente = Cliente::find($id_cliente);
+
+        return view('cliente.destroy', ['cliente' => $cliente]);
+    }
 }
+

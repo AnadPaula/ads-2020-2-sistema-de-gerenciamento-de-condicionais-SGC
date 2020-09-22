@@ -3,11 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProdutoController;
-/*use App\Models\Cliente;
-use App\Models\Produto;
-use App\Models\Funcionario;
-use App\Models\Pedido;
-*/
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +26,8 @@ Route::get('/dashboard', function () {
 Route::resource('/clientes', ClienteController::class);
 Route::get('/clientes/destroy/{id_cliente}', 'ClienteController@destroyConfirm')->name('clientes.destroy-confirm');
    
-Route::resource('/produtos', ProdutoController::class);
+Route::resource('produtos', ProdutoController::class);
+Route::get('/produtos/destroy/{cod_produto}', 'ProdutoController@destroyConfirm')->name('produtos.destroy-confirm');
 
 
 

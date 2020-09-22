@@ -1,3 +1,4 @@
+@extends('layouts.admin')
 
 @section('content-title', 'Exclusão de cliente')
 
@@ -13,14 +14,14 @@
         @method('DELETE')
 
         <p>
+            <b>ID:</b> {{ $cliente->id_cliente }} <br>
             <b>Nome:</b> {{ $cliente->nome_cliente }} <br>
-            <b>CPF:</b> {{ $cliente->cpf }} <br>
-            <b>ID_CLIENTE:</b> {{ $cliente->id_cliente }} <br>
+            <b>CPF:</b> {{ $cliente->cpf }} <br>           
             <b>RG:</b> {{ $cliente->RG }} <br>
-            <b>ENDEREÇO:</b> {{ $cliente->endereço }} <br>
+            <b>Endereço:</b> {{ $cliente->endereço }} <br>
             <b>E-mail:</b> {{ $cliente->email }}
-            <b>DATA NASCIMENTO:</b> {{ $cliente->data_nascimento }} <br>
-            <b>TELEFONE:</b> {{ $cliente->telefone }} <br>
+            <b>Data Nascimento:</b> {{ $cliente->data_nascimento }} <br>
+            <b>Telefone:</b> {{ $cliente->telefone }} <br>
         </p>
 
         <button class="btn btn-warning" type="submit">Sim</button>

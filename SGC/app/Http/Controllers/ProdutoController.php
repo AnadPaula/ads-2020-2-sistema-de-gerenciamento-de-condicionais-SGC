@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+
 class ProdutoController extends Controller
 {
     /**
@@ -13,7 +14,9 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('produto.index');
+        $produtos = Produtos::All();
+
+        return view('produto.index', array('produtos' => $produtos));
     }
 
     /**
@@ -23,7 +26,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        //
+        return view('produto.create');
     }
 
     /**
@@ -34,7 +37,9 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produto = Produto::create($request->all());
+
+        return redirect('produtos')->with('status', 'Novo produto cadastrado com sucesso!');
     }
 
     /**
@@ -54,9 +59,11 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($cod_produto)
     {
-        //
+        $produto = Produto::find($cod_produto);
+
+        return view('produto.edit', array('produto' => $produto));
     }
 
     /**
@@ -66,9 +73,12 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $cod_produto)
     {
-        //
+        $produto = Produto::find($cod_produto);
+        $produto->update($request->all());
+
+        return redirect('produtos')->with('statusUpdate', 'Produto atualizado com sucesso!');
     }
 
     /**
@@ -77,8 +87,22 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($cod_produto)
     {
-        //
+        $produto = Produto::find($cod_produto);
+        $nome_produto = $produto->nome_produto;
+
+        $cliente->delete();
+
+        $mensagem = "O produto <b>{$nome_produto}</b> foi excluído com sucesso!";
+
+        return redirect('produtos')->with('statusUpdate', $mensagem);
+    }
+
+    public function destroyConfirm($id_produto)
+    {
+        $produto = Produto::find($cod_produto);
+
+        return view('produto.destroy', ['produto' => $produto]);
     }
 }

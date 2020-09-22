@@ -27,7 +27,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Id_Cliente</th>
+                    <th>ID</th>
                     <th>Nome</th>
                     <th>CPF</th>                    
                     <th>RG</th>

@@ -24,7 +24,7 @@
             <input type="text" class="form-control" id="" name="rg" value="{{ $cliente->RG }}">
         </div>
         <div class="form-group">
-            <label for="">ENDEREÇO</label>
+            <label for="">Endereço</label>
             <input type="text" class="form-control" id="" name="endereço" value="{{ $cliente->endereço }}">
         </div>
         <div class="form-group">
@@ -32,11 +32,11 @@
             <input type="email" class="form-control" id="" name="email" value="{{ $cliente->email }}">
         </div>
         <div class="form-group">
-            <label for="">DATA NASCIMENTO</label>
+            <label for="">Data Nascimento</label>
             <input type="text" class="form-control" id="" name="data_nascimento" value="{{ $cliente->data_nascimento }}">
         </div>
         <div class="form-group">
-            <label for="">TELEFONE</label>
+            <label for="">Telefone</label>
             <input type="text" class="form-control" id="" name="telefone" value="{{ $cliente->telefone }}">
         </div>
 
