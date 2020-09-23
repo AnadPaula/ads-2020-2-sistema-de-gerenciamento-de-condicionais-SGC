@@ -15,7 +15,7 @@ class Produto extends Model
 
     protected $fillable = ['cod_produto','nome_produto', 'marca', 'valor', 'cor', 'quantidade', 'tamanho'];
 
-    public $timestamps = false;
+    public $timestamps = false; 
 
     
 }

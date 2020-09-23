@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <label for="">Nome</label>
-            <input type="text" class="form-control" id="" name="nome_produto" value="{{ $cproduto->nome_produto }}">
+            <input type="text" class="form-control" id="" name="nome_produto" value="{{ $produto->nome_produto }}">
         </div>
         <div class="form-group">
             <label for="">Marca</label>

@@ -19,7 +19,7 @@
             <b>CPF:</b> {{ $cliente->cpf }} <br>           
             <b>RG:</b> {{ $cliente->RG }} <br>
             <b>Endereço:</b> {{ $cliente->endereço }} <br>
-            <b>E-mail:</b> {{ $cliente->email }}
+            <b>E-mail:</b> {{ $cliente->email }} <br>
             <b>Data Nascimento:</b> {{ $cliente->data_nascimento }} <br>
             <b>Telefone:</b> {{ $cliente->telefone }} <br>
         </p>

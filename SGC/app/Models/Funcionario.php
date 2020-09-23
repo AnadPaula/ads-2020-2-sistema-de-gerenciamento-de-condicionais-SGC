@@ -9,7 +9,11 @@ class Funcionario extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'cod_funcionario';
+
     protected $table = 'funcionarios';
 
-    protected $primaryKey = 'cod_funcionario';
+    protected $fillable = ['cod_funcionario','nome_funcionario', 'cpf', 'telefone', 'email', 'endereco'];
+
+    public $timestamps = false;  
 }

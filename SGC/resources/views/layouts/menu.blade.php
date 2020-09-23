@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('funcionarios*') ? 'active' : '' }}" href="">
+                <a class="nav-link {{ request()->is('funcionarios*') ? 'active' : '' }}" href="{{ route('funcionarios.index') }}">
                     <span data-feather="shopping-cart"></span>
                    Funcionários
                 </a>

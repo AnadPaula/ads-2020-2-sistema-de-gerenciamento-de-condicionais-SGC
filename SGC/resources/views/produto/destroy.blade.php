@@ -19,7 +19,7 @@
             <b>Marca:</b> {{ $produto->marca }} <br>           
             <b>Valor:</b> {{ $produto->valor }} <br>
             <b>Cor:</b> {{ $produto->cor }} <br>
-            <b>Quantidade:</b> {{ $produto->quantidade }}
+            <b>Quantidade:</b> {{ $produto->quantidade }} <br>
             <b>Tamanho:</b> {{ $produto->tamanho }} <br>            
         </p>
 

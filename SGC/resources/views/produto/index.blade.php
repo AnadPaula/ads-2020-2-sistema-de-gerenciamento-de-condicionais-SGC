@@ -17,17 +17,17 @@
         </div>
     @endif
 
-    @if(!count($clientes))
+    @if(!count($produtos))
         <div class="alert alert-info">
             Nenhum registro encontrado!
         </div>
     @endif
 
-    @if(count($clientes))
+    @if(count($produtos))
         <table class="table">
             <thead>
                 <tr>
-                    <th>Cod_Produto</th>
+                    <th>ID</th>
                     <th>Nome</th>
                     <th>Marca</th>                    
                     <th>Valor</th>
@@ -40,7 +40,7 @@
             </thead>
             <tbody>
 
-                @foreach($clientes as $cliente)
+                @foreach($produtos as $produto)
                     <tr>
                         <td>{{ $loop->iteration }}</td>                                            
                         <td>{{ $produto->nome_produto }}</td>
@@ -48,8 +48,7 @@
                         <td>{{ $produto->valor }}</td>
                         <td>{{ $produto->cor }}</td>
                         <td>{{ $produto->quantidade }}</td>
-                        <td>{{ $produto->tamanho}}</td>
-                        <td>{{ $produto->telefone }}</td>
+                        <td>{{ $produto->tamanho}}</td>                        
                         <td>
                             <a href="{{ route('produtos.edit', $produto->cod_produto) }}">Editar</a>
 

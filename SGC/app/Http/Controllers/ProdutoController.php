@@ -14,7 +14,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        $produtos = Produtos::All();
+        $produtos = Produto::All();
 
         return view('produto.index', array('produtos' => $produtos));
     }
@@ -48,9 +48,11 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($cod_produto)
     {
-        //
+        $produto = Produto::with('pedidos')->find($cod_produto);        
+
+        return $produto;
     }
 
     /**
@@ -92,14 +94,14 @@ class ProdutoController extends Controller
         $produto = Produto::find($cod_produto);
         $nome_produto = $produto->nome_produto;
 
-        $cliente->delete();
+        $produto->delete();
 
         $mensagem = "O produto <b>{$nome_produto}</b> foi excluído com sucesso!";
 
         return redirect('produtos')->with('statusUpdate', $mensagem);
     }
 
-    public function destroyConfirm($id_produto)
+    public function destroyConfirm($cod_produto)
     {
         $produto = Produto::find($cod_produto);
 
