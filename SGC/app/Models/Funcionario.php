@@ -14,7 +14,7 @@ class Funcionario extends Model
 
     protected $table = 'funcionarios';
 
-    protected $fillable = ['cod_funcionario','nome_funcionario', 'cpf', 'telefone', 'email', 'endereco'];
+    protected $fillable = ['nome_funcionario', 'cpf', 'telefone', 'email', 'endereco'];
 
     public $timestamps = false;  
 }

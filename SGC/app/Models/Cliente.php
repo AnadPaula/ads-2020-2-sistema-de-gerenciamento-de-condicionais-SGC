@@ -14,7 +14,7 @@ class Cliente extends Model
 
     protected $table = 'clientes';
 
-    protected $fillable = ['id_cliente','nome_cliente', 'cpf', 'RG', 'endereço', 'email', 'data_nascimento', 'telefone'];
+    protected $fillable = ['nome_cliente', 'cpf', 'RG', 'endereço', 'email', 'data_nascimento', 'telefone'];
 
     public $timestamps = false;    
 

@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Cliente;
-use App\Models\Produto;
-use App\Models\Funcionario;
-use App\Models\Pedido;
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\FuncionarioController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,13 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/clientes', ClienteController::class);
-Route::get('/clientes/destroy/{id_cliente}', 'ClienteController@destroyConfirm')->name('clientes.destroy-confirm');
 
-Route::resource('produtos', ProdutoController::class);
+
+Route::resource('/clientes', ClienteController::class);
+Route::get('/clientes/destroy/{id_cliente}', [ClienteController::class, 'destroyConfirm'])->name('clientes.destroy-confirm');
+
 Route::resource('/produtos', ProdutoController::class);
-Route::get('/produtos/destroy/{cod_produto}', 'ProdutoController@destroyConfirm')->name('produtos.destroy-confirm');
+Route::get('/produtos/destroy/{cod_produto}', [ProdutoController::class,'destroyConfirm'])->name('produtos.destroy-confirm');
 
 
 Route::resource('/funcionarios', FuncionarioController::class);
-Route::get('/funcionarios/destroy/{cod_funcionario}', 'FuncionarioController@destroyConfirm')->name('funcionarios.destroy-confirm');
+Route::get('/funcionarios/destroy/{cod_funcionario}', [FuncionarioController::class,'destroyConfirm'])->name('funcionarios.destroy-confirm');
+

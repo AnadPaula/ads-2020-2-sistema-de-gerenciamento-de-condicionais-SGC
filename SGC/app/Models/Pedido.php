@@ -14,7 +14,7 @@ class Pedido extends Model
 
     protected $table = 'pedidos';
 
-    protected $fillable = ['id_pedido','data_entrega', 'quantidade'];
+    protected $fillable = ['data_entrega', 'quantidade'];
 
     public $timestamps = false; 
 }
