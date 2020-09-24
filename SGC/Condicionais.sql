@@ -50,21 +50,19 @@ data_entrega date not null,
 quantidade int not null,
 fk_id_cliente int not null,
 fk_cod_funcionario int not null,
-fk_cod_produto int not null,
 primary key(id_pedido),
 foreign key (fk_id_cliente) references clientes (id_cliente),
-foreign key (fk_cod_funcionario) references funcionarios (cod_funcionario),
-foreign key (fk_cod_produto) references produtos (cod_produto)
+foreign key (fk_cod_funcionario) references funcionarios (cod_funcionario)
 );
 
 drop table pedidos;
 alter table pedidos add constraint fk_id_cliente foreign key (id_cliente) references clientes (id_cliente);
 select * from pedidos;
 
-insert into  pedidos values (1, '2020-09-18', 1, 1, 1, 1);
-insert into  pedidos values (2, '2020-09-18', 2, 2, 2, 2);
-insert into  pedidos values (3, '2020-09-18', 3, 3, 3, 3);
-insert into  pedidos values (4, '2020-09-18', 4, 4, 4, 4);
+insert into  pedidos values (1, '2020-09-18', 1, 1, 1);
+insert into  pedidos values (2, '2020-09-18', 2, 2, 2);
+insert into  pedidos values (3, '2020-09-18', 3, 3, 3);
+insert into  pedidos values (4, '2020-09-18', 4, 4, 4);
 
 truncate table pedidos;
 
@@ -92,3 +90,11 @@ insert into funcionarios values ('Maria Tereza de Andrade', 1, '11111111111', '1
 insert into funcionarios values ('Gabriel de Oliveira', 2, '22222222222', '22222222222', 'gabrieloliveira@hotmail.com', 'Rua Paraná, 2529, Ji-Paraná-RO');
 insert into funcionarios values ('Cristina de Brito', 3, '33333333333', '33333333333', 'cristinabrito@hotmail.com', 'Rua Jorge Teixeira, 2131, Ji-Paraná-RO');
 insert into funcionarios values ('Carla Teixeira de Melo', 4, '44444444444', '44444444444', 'carlateixeira@hotmail.com', 'Rua Goias, 2965, Ji-Paraná-RO');
+
+create table pedidos_produtos (
+fk_id_pedido int not null,
+fk_cod_produto int not null,
+foreign key (fk_id_pedido) references pedidos(id_pedido),
+foreign key (fk_cod_produto) references produtos (cod_produto)
+);
+select * from pedidos_produtos;

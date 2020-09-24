@@ -28,7 +28,7 @@
            
 
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('pedidos*') ? 'active' : '' }}" href="">
+                <a class="nav-link {{ request()->is('pedidos*') ? 'active' : '' }}" href="{{ route('pedidos.index') }}">
                     <span data-feather="users"></span>
                    Pedidos
                 </a>

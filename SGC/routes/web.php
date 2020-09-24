@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\FuncionarioController;
+use App\Http\Controllers\PedidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,7 @@ Route::get('/produtos/destroy/{cod_produto}', [ProdutoController::class,'destroy
 
 Route::resource('/funcionarios', FuncionarioController::class);
 Route::get('/funcionarios/destroy/{cod_funcionario}', [FuncionarioController::class,'destroyConfirm'])->name('funcionarios.destroy-confirm');
+
+Route::resource('/pedidos', PedidoController::class);
+Route::get('/pedidos/destroy/{id_pedido}', [PedidoController::class,'destroyConfirm'])->name('pedidos.destroy-confirm');
 

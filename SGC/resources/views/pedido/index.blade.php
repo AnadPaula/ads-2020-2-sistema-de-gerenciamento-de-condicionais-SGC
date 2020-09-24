@@ -29,17 +29,18 @@
                 <tr>
                     <th>ID</th>
                     <th>Data de Entrega</th>
-                    <th>Quantidade</th>                    
+                    <th>Quantidade</th> 
+                    <th>Opções</th>                    
                 </tr>
             </thead>
             <tbody>
 
                 @foreach($pedidos as $pedido)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>                                            
-                        <td>{{ $pedido->nome_pedido }}</td>
+                        <td>{{ $loop->iteration }}</td>                                         
                         <td>{{ $pedido->data_entrega}}</td>                       
                         <td>{{ $pedido->quantidade }}</td>
+                        <td>
                             <a href="{{ route('pedidos.edit', $pedido->id_pedido) }}">Editar</a>
 
                             <a href="{{ route('pedidos.destroy-confirm', $pedido->id_pedido) }}">Excluir</a>
