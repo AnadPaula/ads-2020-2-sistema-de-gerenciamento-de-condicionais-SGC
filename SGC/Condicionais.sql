@@ -44,6 +44,8 @@ truncate table produtos;
 
 alter table produtos add tamanho char(3) not null;
 
+drop table produtos;
+
 create table pedidos (
 id_pedido int auto_increment,
 data_entrega date not null,

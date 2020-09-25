@@ -95,7 +95,7 @@ class FuncionarioController extends Controller
         $funcionario = Funcionario::find($cod_funcionario);
         $nome_funcionario = $funcionario->nome_funcionario;
 
-        $cliente->delete();
+        $funcionario->delete();
 
         $mensagem = "O funcionário <b>{$nome_funcionario}</b> foi excluído com sucesso!";
 
@@ -103,7 +103,7 @@ class FuncionarioController extends Controller
     }
 
 
-    public function destroyConfirm($id_funcionario)
+    public function destroyConfirm($cod_funcionario)
     {
         $funcionario = Funcionario::find($cod_funcionario);
 

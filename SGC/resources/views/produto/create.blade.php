@@ -32,7 +32,7 @@
         </div>
         <div class="form-group">
             <label for="">Tamanho</label>
-            <input type="text" class="form-control" id="" name="data_nascimento">
+            <input type="text" class="form-control" id="" name="tamanho">
         </div>        
 
         <button type="submit" class="btn btn-primary">Salvar</button>

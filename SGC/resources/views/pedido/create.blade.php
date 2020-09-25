@@ -17,4 +17,6 @@
             <label for="">Quantidade</label>
             <input type="text" class="form-control" id="" name="quantidade">
         </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
 @endsection
