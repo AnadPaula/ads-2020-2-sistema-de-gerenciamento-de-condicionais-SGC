@@ -100,3 +100,6 @@ foreign key (fk_id_pedido) references pedidos(id_pedido),
 foreign key (fk_cod_produto) references produtos (cod_produto)
 );
 select * from pedidos_produtos;
+
+select * from pedidos_produtos;
+
