@@ -5,10 +5,7 @@
 @section('content')
     <form action="{{ route('pedidos.store') }}" method="post">
         @csrf
-        <div class="form-group">
-            <label for="">ID</label>
-            <input type="text" class="form-control" id="" name="id_pedido">
-        </div>
+
         <div class="form-group">
             <label for="">Data de Entrega</label>
             <input type="text" class="form-control" id="" name="data_entrega">
